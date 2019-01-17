@@ -48,7 +48,7 @@ module.exports = app => {
             .end("Only .png files are allowed!");
         });
       }
-      //after uploading the file to /uploads/image.png,
+      //after uploading the file to /uploads/image.png, run the tesseract ocr
       return ingedientread.read();
     }
   );
