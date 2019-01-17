@@ -1,0 +1,29 @@
+{
+  "name": "read-ingredients",
+  "version": "1.0.0",
+  "description": "Takes in an image Uses google tesseract to extract text put words that follow the word 'ingredients' into an array",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "http": "0.0.0",
+    "js": "^0.1.0",
+    "multer": "^1.4.1",
+    "node-tesseract-ocr": "^0.1.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IanWalston/ingredientreader.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IanWalston/ingredientreader/issues"
+  },
+  "homepage": "https://github.com/IanWalston/ingredientreader#readme"
+}
