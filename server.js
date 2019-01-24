@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //use files in the public folder for get requests to the root '/'
-app.use(express.static("public"));
+app.use(express.static("uploads"));
 
 //a post request to '/upload' will [cause the server to console.log(array of ingredients read by tesseract)]
 require(path.join(__dirname, "/routes.js"))(app);
