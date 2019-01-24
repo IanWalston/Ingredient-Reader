@@ -16,7 +16,7 @@ This app will recieve an image of an ingredient list which is commonly found on 
 
 - gather a larger storage of ingredient list images for test purposes.
 
-- allow user to upload pictures from their device's camara
+- 
 
 - find databases that will give us toxicity, cancer linkage, or legal status in other countries of the ingredients.
 
