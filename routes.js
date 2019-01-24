@@ -21,7 +21,7 @@ module.exports = app => {
   });
 
   app.post(
-    path.join(__dirname, "/upload"),
+    "/upload",
     upload.single("file" /* name attribute of <file> element in your form */),
     (req, res) => {
       imageupload(req, res)
