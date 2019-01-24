@@ -26,7 +26,8 @@ module.exports = app => {
 
           res
             .status(200) //OK
-            .render("index", { ingredients: ingredientarr });
+            .end("balls and a half")
+            // .render("index", { ingredients: ingredientarr });
         });
       }).catch(err=>{throw(err)});
     }
