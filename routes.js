@@ -23,7 +23,6 @@ module.exports = app => {
           console.log(data);
 
           const ingredientarr = ingredientfilter(data)
-          const ingredientlist = JSON.stringify(ingredientarr)
 
           res
             .status(200) //OK
