@@ -23,3 +23,4 @@ This app will recieve an image of an ingredient list which is commonly found on 
 
 
 The server has been deployed to heroku here for testing: [https://read-ingredients.herokuapp.com/](here)
+It doesn't work at all yet. It gets stuck on a post request. 
