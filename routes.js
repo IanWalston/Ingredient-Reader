@@ -1,12 +1,13 @@
 //export the whole file as something meant to be curried by a server.js like this: "require("./fileupload.js")(app);"
 module.exports = app => {
-  const recognize = require("./control/recognize.js");
-  const imageupload = require("./control/imageupload.js");
-  const ingredientfilter = require('./control/ingredientfilter.js');
+  const path = require("path");
+  const recognize = require(path.join(__dirname, "/control/recognize.js"));
+  const imageupload = require(path.join(__dirname, "/control/imageupload.js"));
+  const ingredientfilter = require(path.join(__dirname, "/control/ingredientfilter.js"));
 
   const multer = require("multer");
   const upload = multer({
-    dest: "./uploads"
+    dest: path.join(__dirname, "/uploads")
     // you might also want to set some limits: https://github.com/expressjs/multer#limits
   });
 
@@ -26,8 +27,7 @@ module.exports = app => {
 
           res
             .status(200) //OK
-            .end("balls and a half")
-            // .render("index", { ingredients: ingredientarr });
+            .render("index", { ingredients: ingredientarr });
         });
       }).catch(err=>{throw(err)});
     }

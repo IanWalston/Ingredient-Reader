@@ -1,3 +1,4 @@
+const path = require("path");
 //dependencies
 const express = require("express");
 const app = express();
@@ -16,7 +17,7 @@ app.use(express.json());
 // app.use(express.static("public"));
 
 //a post request to '/upload' will [cause the server to console.log(array of ingredients read by tesseract)]
-require("./routes.js")(app);
+require(path.join(__dirname, "/routes.js"))(app);
 
 //set server to listen to port 3000, or whatever port the host wants it to use
 const PORT = process.env.PORT || 3000;
