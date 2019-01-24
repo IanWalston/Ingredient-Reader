@@ -8,10 +8,15 @@ module.exports = app => {
     "/control/ingredientfilter.js"
   ));
 
+  const storage = multer.diskStorage({
+    destination: function(req, file, cb){
+      cb(null, './uploads/')
+    }
+  })
+
   const multer = require("multer");
   const upload = multer({
-    dest: path.join(__dirname, "uploads")
-    // you might also want to set some limits: https://github.com/expressjs/multer#limits
+    storage: storage
   });
 
   app.get("/", (req, res) => {
