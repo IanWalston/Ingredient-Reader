@@ -10,7 +10,7 @@ module.exports = app => {
 
   const multer = require("multer");
   const upload = multer({
-    dest: path.join(__dirname, "/uploads")
+    dest: path.join(__dirname, "uploads")
     // you might also want to set some limits: https://github.com/expressjs/multer#limits
   });
 
